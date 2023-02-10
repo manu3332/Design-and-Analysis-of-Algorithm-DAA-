@@ -1,1 +1,79 @@
+/*
+Given an array of nonnegative integers, design a linear algorithm and implement it using a program to find whether given key element is present in the array or not. Also, find total number of comparisons for each input case.
+*/
 
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[100],b,c,i,j,num;
+    cout<<"Input number of test cases"<<endl;
+    cin>>b;
+    for(i=0;i<b;i++)
+    {
+        cout<<"Input number of elements in array"<<endl;
+        cin>>c;
+        cout<<"Input elements in array"<<endl;
+        for(j=1;j<=c;j++)
+        {
+            cin>>a[j];
+        }
+        cout<<"Input element to search"<<endl;
+        cin>>num;
+        for(j=1;j<=c;j++)
+        {
+            if(a[j]==num)
+            {
+                cout<<"Present"<<j<<endl;
+            }
+            else if(a[j]!=num&&j>c)
+            {
+                cout<<"Not present"<<j<<endl;
+            }
+        }
+    }
+}
+
+
+
+
+
+Input number of test cases
+3
+Input number of elements in array
+8
+Input elements in array
+34
+35
+65
+31
+25
+89
+64
+30
+Input element to search
+89
+Present6
+Input number of elements in array
+5
+Input elements in array
+
+977
+354
+244
+546
+355
+Input element to search
+244
+Present3
+Input number of elements in array
+6
+Input elements in array
+23
+64
+13
+67
+43
+56
+Input element to search
+63
