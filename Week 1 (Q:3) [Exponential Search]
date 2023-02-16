@@ -1,0 +1,59 @@
+/*
+Given an already sorted array of positive integers, design an algorithm and implement it using a program to find whether a given key element is present in the sorted array or not. For an array arr[n], search at the indexes arr[0], arr[2], arr[4],.....,arr[2k] and so on. Once the interval (arr[2k] < key < arr[ 2k+1] ) is found, perform a linear search operation from the index 2k to find the element key. (Complexity < O(n), where n is the number of elements need to be scanned for searching)
+*/
+#include<iostream>
+using namespace std;
+int binarysearch(int a[],int c,int num)
+{
+    int lb = 0, ub = c - 1, mid;
+    while (lb <= ub)
+        {
+        mid = (lb + ub) / 2;
+        if (a[mid] == num)
+        {
+            return mid;
+        }
+        else if (a[mid] > num)
+        {
+            ub = mid - 1;
+        }
+         else if (a[mid] < num)
+        {
+            lb = mid + 1;
+        }
+    }
+    return lb;
+}
+int linearsearch(int a[],int c,int num)
+{
+    int i=0;
+    while (i<c &&a[i]<num)
+    {
+        i=i*2+1;
+    }
+    return binarysearch(a, min(i, c-1), num);
+}
+
+int main() {
+    int a[100], b, c, i, j, num;
+    cout << "Input number of test cases" << endl;
+    cin >> b;
+    for (i = 0; i < b; i++) {
+        cout << "Input number of elements in array" << endl;
+        cin >> c;
+        cout << "Input sorted elements in array" << endl;
+        for (j = 0; j < c; j++) {
+            cin >> a[j];
+        }
+        cout << "Input element to search" << endl;
+        cin >> num;
+        int res = linearsearch(a, c, num);
+        if (res == c || a[res] != num) {
+            cout << "Element not found in the array. It would be inserted at index " << res << endl;
+        } else {
+            cout << "Element found at index " << res << endl;
+        }
+    }
+    return 0;
+}
+
