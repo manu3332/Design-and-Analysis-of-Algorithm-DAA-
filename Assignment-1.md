@@ -1,8 +1,8 @@
 # Design-and-Analysis-of-Algorithm-DAA-
 Assignment-1 (Q:1)
-![IMG20230221111140](https://user-images.githubusercontent.com/124770555/220258131-ec55c6db-b129-4cd7-b605-6738031f0f89.jpg)
+![IMG20230221111140](https://user-images.githubusercontent.com/124770555/220284291-a3af4838-9827-4d5c-a34f-59cd4b36a011.jpg)
 Assignment-1 (Q:1 , Q:2)
-![IMG20230221111153](https://user-images.githubusercontent.com/124770555/220258146-fb4f66e5-0b84-4c6c-9812-02ccaabe1856.jpg)
+![IMG20230221111153](https://user-images.githubusercontent.com/124770555/220284322-03041e8d-a879-4b1e-876c-4b5679194bbb.jpg)
 Assignment-1 (Q:3 , Q:4)
 ![IMG20230221111201](https://user-images.githubusercontent.com/124770555/220258157-485595f1-972e-4445-8fe7-c8587fb1df7b.jpg)
 Assignment-1 (Q:5 , Q:6)
