@@ -1,0 +1,49 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+void indices(int a[],int n)
+{
+    int i,j,k,f=0,x,y,z;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            for(k=0;k<n;k++)
+            {
+                if(a[i]+a[j]==a[k])
+                {
+                    x=i;
+                    y=j;
+                    z=k;
+                    f=1;
+                }
+            }
+        }
+    }
+    if(f==1)
+    {
+        cout<<a[x]<<endl<<a[y]<<endl<<a[z]<<endl;
+    }
+    else
+    {
+        cout<<"No sequence found"<<endl;
+    }
+}
+int main()
+{
+    int n,i,t;
+    cout<<"Input no of test cases"<<endl;
+    cin>>t;
+    while(t--)
+    {
+        cout<<"Input size of array"<<endl;
+        cin>>n;
+        int a[n];
+        cout<<"Input elements in an array"<<endl;
+        for(i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+        indices(a,n);
+    }
+}
