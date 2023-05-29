@@ -1,0 +1,63 @@
+/*
+Given an unsorted array of integers, design an algorithm and implement it using a program to
+find whether two elements exist such that their sum is equal to the given key element. (Time
+Complexity = O(n log n)).
+*/
+#include<bits/stdc++.h>
+using namespace std;
+void keysum(int a[],int key,int n)
+{
+    int i=0,j=n-1;
+    while(i<j)
+    {
+        int x=a[i]+a[j];
+        if(x>key)
+        {
+            j--;
+        }
+        else if(x<key)
+        {
+            i++;
+        }
+        else if(x==key)
+        {
+            cout<<a[i]<<endl<<a[j];
+            break;
+        }
+        else
+        {
+            cout<<"No such element exist"<<endl;
+        }
+    }
+}
+int main()
+{
+    int a[100],n,key,testcases,t;
+    cout<<"Input number of testcases"<<endl;
+    cin>>testcases;
+    while(testcases--)
+    {
+        cout<<"Input size of array"<<endl;
+        cin>>n;
+        cout<<"Input elements in array"<<endl;
+        for(int i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+        cout<<"Input key"<<endl;
+        cin>>key;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n-i-1;j++)
+            {
+                if(a[j]>a[j+1])
+                {
+                    t=a[j];
+                    a[j]=a[j+1];
+                    a[j+1]=t;
+                }
+            }
+        }
+        keysum(a,key,n);
+    }
+}
